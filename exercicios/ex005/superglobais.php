@@ -11,6 +11,7 @@
         <pre>
             <?php
                 setcookie("dia-da-semana", "SEGUNDA", time() + 3600);
+                
                 session_start();
                 $_SESSION["teste"] = "FUNCIONOU!";
             
