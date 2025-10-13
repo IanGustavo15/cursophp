@@ -12,7 +12,7 @@
         <?php 
             $real = $_GET["real"];
             $cotacao = 5.53;
-            $dolar = $real * $cotacao;
+            $dolar = $real / $cotacao;
             echo "Seus R$ $real equivalem a <strong>US$ $dolar</strong><br><br>";
             echo "<strong>*Cotação fixa de R$$cotacao</strong> informada diretamente no código.";
         ?>
