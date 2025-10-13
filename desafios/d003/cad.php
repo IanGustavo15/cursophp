@@ -13,9 +13,15 @@
             $real = $_GET["real"];
             $cotacao = 5.53;
             $dolar = $real / $cotacao;
-            echo "Seus R$ $real equivalem a <strong>US$ $dolar</strong><br><br>";
-            echo "<strong>*Cotação fixa de R$$cotacao</strong> informada diretamente no código.";
+            // echo "Seus R\$ " . number_format($real, 2, ",", ".")  . " equivalem a <strong>US\$ " . number_format($dolar, 2, ",", ".") . "</strong><br><br>";
+            // echo "<strong>*Cotação fixa de R\$ " . number_format($cotacao, 2, ",", ".") . "</strong> informada diretamente no código.";
+
+            $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+
+            echo "<p>Seus " . numfmt_format_currency($padrao, $real, "BRL")  . " equivalem a <strong>" . numfmt_format_currency($padrao, $dolar, "USD") . "</strong></p>";
+            echo "<p><strong>*Cotação fixa de R\$ " . numfmt_format_currency($padrao, $cotacao, "BRL") . "</strong> informada diretamente no código.</p>";
         ?>
+        <button onclick="javascript:history.go(-1)">&#x2B05; Voltar</button>
     </section>
 </body>
 </html>
