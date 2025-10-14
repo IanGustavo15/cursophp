@@ -21,7 +21,7 @@
             <h2>Resultado</h2>
         <?php 
         $ano_nascimento = $_GET["ano_nascimento"] ?? 2000;
-        $ano_futuro = $_GET["ano_futuro"] ?? $ano_atual;
+        $ano_futuro = $_GET["ano_futuro"] ?? (int)$ano_atual;
         $idade = (int)$ano_futuro - (int)$ano_nascimento;
         echo "Quem nasceu em $ano_nascimento vai ter <strong>$idade anos</strong> em $ano_futuro!";
         ?>
