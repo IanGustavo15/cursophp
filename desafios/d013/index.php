@@ -14,7 +14,7 @@
 </head>
 <body>
     <?php 
-        $padrao = numfmt_create("pBR", NumberFormatter::CURRENCY);
+        $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
         $saque = $_GET["saque"] ?? 0;
         $nota_100 = $saque / 100;
         $resto = $saque  % 100;
