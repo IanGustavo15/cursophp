@@ -71,7 +71,7 @@ class ContaBanco
         if ($this->getStatus() == true) {
             if ($this->getSaldo() >= $v) {
                 $this->setSaldo($this->getSaldo() - $v);
-                echo "Mensalidade de $v debitada da conta de ". $this->getDono().".";
+                echo "<p>Mensalidade de $v debitada da conta de ". $this->getDono().".</p>";
             } else {
                 echo "<p>Saldo insuficiente.</p>";
             }
