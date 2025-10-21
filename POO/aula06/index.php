@@ -6,8 +6,17 @@
     <title>Aula 06 - POO</title>
 </head>
 <body>
-    <?php 
-        require_once 'ControleRemoto.php';
-    ?>
+    <pre>
+        <h1>Projeto Controle Remoto</h1>
+        <?php
+            require_once 'ControleRemoto.php';
+            $c = new ControleRemoto;
+            $c->ligar();
+            $c->play();
+            $c->maisVolume();
+            $c->abrirMenu();
+            
+        ?>
+    </pre>
 </body>
 </html>
