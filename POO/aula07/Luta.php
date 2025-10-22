@@ -1,4 +1,5 @@
 <?php 
+        require_once 'Lutador.php';
     class Luta
     {
         // Atributos
@@ -8,13 +9,46 @@
         private $aprovada;
 
         // Métodos
-        public function marcarLuta(): void
+        public function marcarLuta($l1, $l2): void
         {
-            
+                if ($l1->getCategoria() === $l2->getCategoria() && $l1 != $l2) {
+                        $this->aprovada = true;
+                        $this->desafiado = $l1;
+                        $this->desafiante = $l2;
+                }  else {
+                        $this->aprovada = false;
+                        $this->desafiado = null;
+                        $this->desafiante = null;
+                }
         }
         public function lutar(): void
         {
-            
+                if ($this->aprovada == true) {
+                        $this->desafiado->apresentar();
+                        $this->desafiante->apresentar();
+                        $vencedor = rand(0, 2);
+                        switch ($vencedor) {
+                                case 0: // Empate
+                                        echo "Empate";
+                                        $this->desafiado->empatarLuta();
+                                        $this->desafiante->empatarLuta();
+                                        break;
+                                case 1: // Desafiado vence
+                                        echo "<p>". $this->desafiado->getNome()." venceu ". $this->desafiante->getNome()."</p>";
+                                        $this->desafiado->ganharLuta();
+                                        $this->desafiante->perderLuta();
+                                        break;
+                                case 2: // Desafiante vence
+                                        echo "<p>". $this->desafiante->getNome()." venceu ". $this->desafiado->getNome()."</p>";
+                                        $this->desafiante->ganharLuta();
+                                        $this->desafiado->perderLuta();
+                                        break;
+                                
+                                
+                        }
+                } else{
+                        echo "<p>A luta não pode acontecer.</p>";
+                }
         }
         
 
@@ -27,7 +61,6 @@
         {
                 return $this->desafiado;
         }
-
         /**
          * Set the value of desafiado
          *
@@ -47,7 +80,6 @@
         {
                 return $this->desafiante;
         }
-
         /**
          * Set the value of desafiante
          *
@@ -67,7 +99,6 @@
         {
                 return $this->rounds;
         }
-
         /**
          * Set the value of rounds
          *
@@ -87,7 +118,6 @@
         {
                 return $this->aprovada;
         }
-
         /**
          * Set the value of aprovada
          *
