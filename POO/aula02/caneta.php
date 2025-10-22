@@ -15,11 +15,14 @@
         }
         }
         function Tampar(){
-            $this->tampada == true;
+            $this->tampada = true;
         }
         function Destampar(){
-            $this->tampada == false;
+            $this->tampada = false;
+        }
+        function trocarTampa(){
+            $this->tampada = !$this->tampada;
         }
     }
-
+// 
 ?>

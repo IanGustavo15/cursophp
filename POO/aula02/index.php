@@ -13,7 +13,9 @@
         $c1->ponta = 0.5;
         $c1->tampada = false;
         $c1->tampar();
+        $c1->trocarTampa();
         $c1->rabiscar();
+        
 
         $c2 = new Caneta;
         $c2->cor = "Verde";
