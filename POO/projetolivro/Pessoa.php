@@ -6,11 +6,11 @@
         private $sexo;
 
 
-        public function __construct($nome, $idade, $sexo)
+        public function __construct($nome, $idade, $sex)
         {
             $this->nome = $nome;
             $this->idade = $idade;
-            $this->sexo = $sexo;
+            $this->sexo = $sex;
         }
 
 

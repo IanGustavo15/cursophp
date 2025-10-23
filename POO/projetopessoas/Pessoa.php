@@ -1,5 +1,6 @@
 <?php 
-    class Pessoaa
+namespace projetopessoas;
+    class Pessoa
     {
         private $nome;
         private $idade;

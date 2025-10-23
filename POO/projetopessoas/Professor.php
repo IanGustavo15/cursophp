@@ -1,6 +1,7 @@
 <?php 
-require_once "Pessoaa.php";
-    class Professor extends Pessoaa
+namespace projetopessoas;
+require_once "Pessoa.php";
+    class Professor extends Pessoa
     {
         private $especialidade;
         private $salario;

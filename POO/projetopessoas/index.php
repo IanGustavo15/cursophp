@@ -8,13 +8,17 @@
 <body>
     <pre>
         <?php
-        require_once "Pessoaa.php";
+        require_once "Pessoa.php";
         require_once "Professor.php";
         require_once "Aluno.php";
         require_once "Funcionario.php";
 
+        use projetopessoas\Pessoa;
+        use projetopessoas\Aluno;
+        use projetopessoas\Professor;
+        use projetopessoas\Funcionario;
 
-        $p1 = new Pessoaa;
+        $p1 = new Pessoa;
         $p2 = new Aluno;
         $p3 = new Professor;
         $p4 = new Funcionario;
