@@ -1,5 +1,7 @@
 <?php 
-    class Visitante extends aula11\Pessoa
+    namespace aula11;
+    require_once "Pessoa.php";
+    class Visitante extends Pessoa
     {
         
     }

@@ -2,9 +2,9 @@
     namespace aula11;
     abstract class Pessoa
     {
-        private $nome;
-        private $idade;
-        private $sexo;
+        protected $nome;
+        protected $idade;
+        protected $sexo;
 
         public final function fazerAniversario(){
             $this->idade ++;
